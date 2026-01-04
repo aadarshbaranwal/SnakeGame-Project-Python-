@@ -1,0 +1,113 @@
+Snake Game – Documentation
+The Snake Game is a classic arcade-style game developed using Python and Tkinter.
+The player controls a snake that moves around the screen, eats food to grow longer, and earns points.
+The game ends when the snake hits the wall or collides with itself.
+This version includes:
+Real-time score tracking
+Keyboard-based controls
+Restart and exit options
+Dynamic snake color selection
+====================================================================================================================
+🛠 Technologies & Libraries Used
+Library	    Purpose
+tkinter	    GUI creation and game canvas
+random	    Random food placement
+Game Features
+Snake Movement
+Controlled using arrow keys
+Moves continuously at a fixed speed
+Cannot reverse direction instantly (prevents invalid movement)
+====================================================================================================================
+Food System
+Food appears at random positions
+Eating food:
+Increases snake length
+Increases score
+Generates new food at a random location
+====================================================================================================================
+Snake Color Selection
+Dropdown menu allows player to choose snake color before starting
+Available colors include:
+Green, Blue, Yellow, Purple, Orange, Pink
+====================================================================================================================
+Score Tracking
+Score is displayed at the top-left corner
+Score increases by 1 for each food eaten
+====================================================================================================================
+Restart &  Exit
+Restart button appears after game over
+Exit button allows safe termination of the game
+====================================================================================================================
+Game Configuration Constants
+Constant	                               Description
+GAME_WIDTH	          Width of the game window
+GAME_HEIGHT	          Height of the game window
+SPEED	                               Snake movement speed
+SPACE_SIZE	          Size of each snake segment
+BODY_PARTS	          Initial snake length
+FOOD_COLOR	          Color of the food
+BACKGROUND_COLOR    Background color of the game
+TOP_BAR_HEIGHT              Reserved space for score & controls
+====================================================================================================================
+Class Explanation
+ Snake Class
+Stores snake body size, color, coordinates, and body segments
+Draws snake rectangles on the canvas
+Handles snake growth logic
+====================================================================================================================
+🍎 Food Class
+Generates food at random grid positions
+Draws food as a circular shape on the canvas
+====================================================================================================================
+Game Functions Explained
+start_game()
+Initializes the game state
+Resets score
+Clears canvas
+Creates new snake and food
+Starts the game loop
+next_turn(snake, food)
+Updates snake movement
+Checks food collision
+Grows snake or removes tail
+Updates score
+Schedules next movement using after()
+change_direction(new_direction)
+Updates snake direction
+Prevents reversing into itself
+check_collisions(snake)
+Detects:
+Wall collision
+Self-collision
+Returns True if collision occurs
+game_over()
+Stops the game loop
+Displays GAME OVER text
+Shows Restart and Exit buttons
+on_exit()
+Closes the game window safely
+====================================================================================================================
+Controls
+Key	                     Action
+⬅ Left Arrow	Move Left
+➡ Right Arrow	Move Right
+⬆ Up Arrow	Move Up
+⬇ Down Arrow	Move Down
+====================================================================================================================
+ GUI Layout
+Top bar:
+Score display
+Snake color dropdown
+Main area:
+Game canvas
+Buttons:
+Restart & Exit (shown after game over)
+====================================================================================================================
+🎯 Conclusion
+The Snake Game demonstrates:
+Event-driven programming
+Real-time animation using Tkinter
+Object-oriented design
+Keyboard input handling
+Game state management
+It is ideal for college projects, Python GUI practice, and portfolio showcase.
